@@ -3,110 +3,113 @@ import styled from "styled-components";
 
 
 
-export const Background = styled.main`
-
-
+export const Container = styled.header`
+ 
+* {
     margin: 0;
     padding: 0;
-
-
+   
+}
 
 a {
-    z-index: 5000;
     color: #fff;
-    text-decoration: none;
+    text-decoration: none; 
     transition: 0.3s;
 
-     &:hover {
-         opacity: 0.7;
-
-     }
+    &:hover{
+        opacity: 0.7;
+    }
 }
 
 .logo {
     font-size: 24px;
-    text-trasform: uppercase;
+    text-transform: uppercase;
     letter-spacing: 4px;
 }
 
-
 nav {
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background: ${({theme}) => theme.colors.navbar};
-    height: 8vh;
+display: flex;
+justify-content: space-around;
+align-items: center;
+background: ${({theme}) => theme.colors.navbar};
+height: 8vh;
 }
 
 .navlist {
- cursor: pointer;
- list-style: none;
- display: flex;
+    list-style: none;
+    display: flex;
+
+    li {
+        letter-spacing: 3px;
+        margin-left: 32px;
+       }
 }
 
-.navlist li {
-    letter-spacing: 3px;
-    margin-left: 32px;
-}
+.mobilemenu{
+cursor: pointer;
+display: none;
 
-.mobileMenu {
-    display: none;
-    cursor: pointer;
-}
-
-.mobileMenu div {
+    div {
     width: 32px;
     height: 2px;
     background: #FFF;
     margin: 8px;
+    }
 }
+
+
 
 @media (max-width: 999px){
 
-body{ 
-    background-color: red;
-    overflow-x: hidden !important;
-}
  
-    .navlist {
-        position: absolute;
-        width: 40vw;
-        height: 92vh;
-        top: 8vh;
-        right: 0;
-        background: ${({theme}) => theme.colors.navbar};
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-     
-    }
+       
+        
+    
+     .navlist{
+         position: absolute;
+         top: 8vh;
+         right: 0%;
+         width: 40vw;
+         height: 92vh;
+         background: ${({theme}) => theme.colors.navbar};
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-around;
+         opacity: 0;
+           
+           li {
+               margin-left: 0;
+           }
 
-    .navlist  li {
-    opacity: 0;
-    margin-left: 0;
+          
         }
 
-    .mobileMenu {
-        display: block;
-    }
- .navlist.active {
-     transform: translateX(0);
- }
+        .navlist.active {
+               transition: 0.5s;
+               opacity: 1;
+           
+        }
 
+        .mobilemenu {
+            display: block;
+        }
 }
 
+.mobilemenu.active {
 
-@keyframes navLinkFade {
-    from {
-         opacity: 0;
-         transform: traslateX(50px);
-    } to { 
-      opacity: 1;
-      transform: traslateX(0);
-    } 
-}
+              .line1{
+                transition: 0.6s;
+                  transform: rotate(-45deg) translate(-8px, 8px) ;
+              }
+              .line3{
+                transition: 0.6s;
+                  transform: rotate(45deg) translate(-5px, -7px) ;
+              }
+              .line2{
+                 opacity: 0;
+              }
+           
+        }
 `
+
+

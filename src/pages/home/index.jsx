@@ -1,16 +1,14 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import {  backgroundContainer } from "./styles";
 
-
-import { Background } from "./styles";
 import Navbar from "../../components/navbar";
 
 
 const Home = () => {
 
 return(
-<Background>
-    <Navbar/>
-</Background> 
+<backgroundContainer>
+<Navbar/>
+</backgroundContainer>
 )
 
 }

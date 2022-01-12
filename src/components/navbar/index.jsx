@@ -1,57 +1,42 @@
-import {useNavigate } from 'react-router-dom';
-import {useState} from 'react';
+import { useState } from 'react';
 
-import { Background } from "./styles";
+import { Container, BurguerContainer } from './styles.js';
+
 
 
 const Navbar = () => {
-
+   
     const [state, setState] = useState(false);
 
-    const navigate = useNavigate();
+    const modifyState = () => setState(!state);
 
-    const handleToProjects = () => navigate('/projects');
-    const handleToContact = () => navigate('/contact');
-    const handleToAbout = () => navigate('/about');
-    const handleToHome = () => navigate('/home');
-     
-    const toggleMode = () => {
-     setState(!state)
-    }
-    
-    
-
-
-return (
-  
-<Background>
-    <body>
-    <header>
-        <nav> 
-             <a class="logo" onClick={handleToHome} >DARK</a>
-            <div class="mobileMenu" onClick={toggleMode}>
-             <div class="one"></div>
-             <div class="two"></div>
-             <div class="three"></div>
-            </div>
-            <ul class={state ? 'navlist active' : 'navlist' }>
-             <li><a onClick={handleToHome}>Inicio</a></li>
-             <li><a onClick={handleToAbout}>Sobre</a></li>
-             <li><a onClick={handleToProjects}>Projetos</a></li>
-             <li><a onClick={handleToContact}>Contato</a></li>
-            </ul>
-        </nav>
-    </header> 
-    </body>
-    
-</Background>
-
-)
-
+    return (
+       <Container>
+            <body>
+                <header> 
+                    <nav>
+                        <a class="logo">DARK</a>
+                        
+                            <div class={state ? 'mobilemenu active' : 'mobilemenu'} onClick={modifyState}>
+                                <div class="line1"></div>
+                                <div class="line2"></div>
+                                <div class="line3"></div>
+                            </div>
+                    
+                        <ul class={state ? 'navlist active' : 'navlist'}>
+                            <li><a>Inicio</a></li>
+                            <li><a>Sobre</a></li>
+                            <li><a>Projetos</a></li>
+                            <li><a>Contato</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </body>
+       </Container>
+    )
 
 }
 
 
+export default Navbar
 
-
-export default Navbar;

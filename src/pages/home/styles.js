@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 
 
-export const Background = styled.main`
-
+export const backgroundContainer = styled.main`
+ 
 `
 
 
