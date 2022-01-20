@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../../components/navbar';
 
 import { Background } from './styles';
 
@@ -12,8 +13,9 @@ const Links = () => {
 
 
 return (
+<div>
+<Navbar/>
 
-    <div>
       <Background>
         <ul class='list'>
             <li><a href="https://instagram/darknx.br">Instagram</a></li>
@@ -21,7 +23,8 @@ return (
             <li><a onClick={handleToHome}>Portfolio</a></li>
         </ul>
       </Background>
-    </div>
+      </div>
+  
 
 )
 
