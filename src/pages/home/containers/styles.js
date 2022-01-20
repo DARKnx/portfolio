@@ -19,6 +19,7 @@ width: 500px;
 height: 200px;
 font-weight: 700;
 white-space: nowrap;
+animation: moveToTitle 2s ease-in-out; 
  .primaryText {
     font-size: 30px;
     color: ${({theme}) => theme.colors.white};
@@ -37,24 +38,27 @@ white-space: nowrap;
    border-right: 2px solid ${({theme}) => theme.colors.secondary};
    font-size: 22px;
    width: min-content;
-  
-   color: ${({theme}) => theme.colors.white};
    overflow: hidden;
-   
+   color: ${({theme}) => theme.colors.white};
+   width: 0;
  }
 
  .cursorAnimated {
-
-    animation: blickCursor 500ms  steps(37) infinite normal, typing 2.5s steps(37) 1s normal;
+   animation: blickCursor 500ms  steps(37) infinite normal, typing 2.5s steps(37) 1s normal;
  }
 
 @keyframes typing {
-    from {
+    
+    from { 
         width: 0;
     } to {
-width: 220px;
+     
+        width: 220px;
+
+
     }
 }
+
  @keyframes blickCursor {
      from {
     border-right-color: ${({theme}) => theme.colors.secondary};
@@ -62,6 +66,20 @@ width: 220px;
     border-right-color: transparent;
      }
  }
+
+ @keyframes moveToTitle{
+    
+    0% {
+        transform: translateY(-25px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0px);
+    
+    }
+}
 `
 
 export const ImageContainer = styled.div`
