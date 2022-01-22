@@ -1,15 +1,18 @@
-import {  backgroundContainer } from "./styles";
+import {  BackgroundContainer } from "./styles";
 
+import AboutContainer from "./containers/aboutContainer";
+import HomeContainer from "./containers/homeContainer";
 import Navbar from "../../components/navbar";
-import HomeContainer from "./containers";
+
 
 const Home = () => {
 
 return(
-<backgroundContainer>
+<BackgroundContainer>
 <Navbar/>
 <HomeContainer/>
-</backgroundContainer>
+</BackgroundContainer>
+
 )
 
 }

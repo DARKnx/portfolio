@@ -11,6 +11,7 @@ const Navbar = () => {
     const navigate = useNavigate();
 
     const modifyState = () => setState(!state);
+    
     const handlerToHome = () => navigate('/home') 
 
     return (
@@ -25,7 +26,7 @@ const Navbar = () => {
                                 <div class="line2"></div>
                                 <div class="line3"></div>
                             </div>
-                    <div></div>
+                  
                         <ul class={state ? 'navlist active' : 'navlist'}>
                             <li><a>Inicio   <span></span> </a></li>
                             <li><a>Sobre    <span></span> </a></li>

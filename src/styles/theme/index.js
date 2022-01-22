@@ -2,10 +2,11 @@
 
 export const theme = {
     colors: {
-        primary: "#23232E",
-        secondary: "#2830FA",
+        primary: "#23232E", 
+        secondary: "#2830FA", 
         white: "#E0E4FF",
-
-        navbar: "#23232E"
+        grey: "#323145", 
+        darkGrey: "#2C2A3B"
+       
     }
 }
