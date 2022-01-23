@@ -1,5 +1,5 @@
 <h1 align="center"><strong>Meu portfolio</strong></h1>
-<h3>Esse e meu portfolio que atualmente esta sendo criado com intuito de demostrar minhas habilidades e ter uma visibilidade melhor sobre meus projetos.</h3><br/>
+<h3>Esse e meu portfolio que atualmente esta em fase de desenvolvimento com intuito de demostrar minhas habilidades e ter uma visibilidade melhor sobre meus projetos.</h3><br/>
 
 
 <div align="center">

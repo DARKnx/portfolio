@@ -14,7 +14,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: ${({theme}) => theme.colors.darkGrey};
+    background-color: ${({theme}) => theme.colors.grey};
 
 }
 ::-webkit-scrollbar {

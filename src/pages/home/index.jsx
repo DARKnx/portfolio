@@ -11,6 +11,7 @@ return(
 <BackgroundContainer>
 <Navbar/>
 <HomeContainer/>
+<AboutContainer/>
 </BackgroundContainer>
 
 )
